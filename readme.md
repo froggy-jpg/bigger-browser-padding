@@ -1,8 +1,6 @@
 # bigger browser padding
-makes padding of the zen browser bigger \
-comes in 3 sizes:
-- big (12px)
-- bigger (16px)
-- biggest (20px) 
-  
-also works in compact mode :3
+makes padding of the zen browser bigger 
+
+also works in compact and split mode :3
+
+\- :frog:
