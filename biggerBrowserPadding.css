@@ -1,51 +1,86 @@
-/* padding in normal mode */
+/* normal mode */
+@media not (-moz-bool-pref: "zen.view.compact") {
+    #tabbrowser-tabpanels {
+        padding: 1px 16px 16px 1px !important;
+    }
 
-@media (-moz-bool-pref: "uc.padding.big") {
-    @media not (-moz-bool-pref: "zen.view.compact") {
-        #tabbrowser-tabpanels {
-            padding: 2px 12px 12px 2px !important;
+    @media (-moz-bool-pref: "zen.view.sidebar-expanded") {
+        #TabsToolbar {
+            margin: 0px 12px 6px 12px !important;
         }
+
+    }
+
+    @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+        #TabsToolbar {
+            margin: 0px 0px 10px 0px !important;
+        }
+    }
+
+    #tabbrowser-tabpanels:has(> [zen-split="true"]) {
+        margin: 0px 10px 10px -6px !important;
     }
 }
 
-@media (-moz-bool-pref: "uc.padding.bigger") {
-    @media not (-moz-bool-pref: "zen.view.compact") {
+/* compact mode */
+@media (-moz-bool-pref: "zen.view.compact") {
+    #tabbrowser-tabpanels {
+        padding: 16px !important;
+    }
+
+    /* hides toolbar*/
+    @media (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
         #tabbrowser-tabpanels {
-            padding: 2px 16px 16px 2px !important;
+            padding: 16px 16px 16px 1px !important;
+        }
+
+        @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+            #TabsToolbar {
+                margin: 16px 0px 10px 0px !important;
+            }
+        }
+
+        @media (-moz-bool-pref: "zen.view.sidebar-expanded") {
+            #TabsToolbar {
+                margin: 12px 12px 6px 12px !important;
+            }
+        }
+
+        #tabbrowser-tabpanels:has(> [zen-split="true"]) {
+            margin: 10px 10px 10px -6px !important;
         }
     }
-}
 
-@media (-moz-bool-pref: "uc.padding.biggest") {
-    @media not (-moz-bool-pref: "zen.view.compact") {
-        #tabbrowser-tabpanels {
-            padding: 2px 20px 20px 2px !important;
-        }
-    }
-}
-
-/* padding in compact mode */
-
-@media (-moz-bool-pref: "uc.padding.big") {
-    @media (-moz-bool-pref: "zen.view.compact") {
-        #tabbrowser-tabpanels {
-            padding: 12px !important;
-        }
-    }
-}
-
-@media (-moz-bool-pref: "uc.padding.bigger") {
-    @media (-moz-bool-pref: "zen.view.compact") {
+    /* hides sidebar*/
+    @media (-moz-bool-pref: "zen.view.compact.hide-tabbar") {
         #tabbrowser-tabpanels {
             padding: 16px !important;
         }
+
+        #tabbrowser-tabpanels:has(> [zen-split="true"]) {
+            margin: 0px 10px 10px 10px !important;
+
+            @media (-moz-bool-pref: "zen.view.compact.hide-toolbar") {
+                margin: 10px !important;
+            }
+        }
     }
 }
 
-@media (-moz-bool-pref: "uc.padding.biggest") {
-    @media (-moz-bool-pref: "zen.view.compact") {
-        #tabbrowser-tabpanels {
-            padding: 20px !important;
-        }
+/* splitview paddings */
+#tabbrowser-tabbox {
+    --zen-split-row-gap: 16px !important;
+    --zen-split-column-gap: 16px !important;
+}
+
+/* remove padding in fullscreen */
+@media (display-mode: fullscreen) {
+    #tabbrowser-tabpanels {
+        padding: 0px !important;
     }
+}
+
+/* remove weird scrollbar in compact mode */
+* {
+    scrollbar-width: none
 }
