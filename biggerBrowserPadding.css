@@ -1,77 +1,91 @@
 /* big mode */
 @media (-moz-bool-pref: "uc.padding.big") {
-    #main-window {
-        --zen-element-separation: 12px !important;
-      }
-      
-      #zen-sidebar-top-buttons {
-        margin: 12px -6px 0px 6px!important;
-      }
-      
-      #zen-sidebar-icons-wrapper {
-        margin: 0px 6px !important;
-        width: auto !important;
-      }
-      
-      #navigator-toolbox {
-        gap: 6px !important;
-      }
-          
-      #tabbrowser-tabbox:has(#tabbrowser-tabpanels[zen-split-view="true"]) {
-        --zen-split-row-gap: calc(var(--zen-element-separation) + 1px) !important;
-        --zen-split-column-gap: calc(var(--zen-element-separation) + 18px) !important;
-        margin-right: -12px !important;
-      }  
+  #main-window {
+    --zen-element-separation: 12px !important;
+  }
+
+  #zen-sidebar-top-buttons {
+    margin: 12px -6px 0px 6px !important;
+  }
+
+  #zen-sidebar-icons-wrapper {
+    margin: 0px 6px !important;
+    width: auto !important;
+  }
+
+  #navigator-toolbox {
+    gap: 6px !important;
+  }
+
+  #tabbrowser-tabbox:has(#tabbrowser-tabpanels[zen-split-view="true"]) {
+    --zen-split-row-gap: calc(var(--zen-element-separation) + 1px) !important;
+    --zen-split-column-gap: calc(var(--zen-element-separation) + 18px) !important;
+    margin-right: -12px !important;
+  }
 }
 
 /* bigger mode */
 @media (-moz-bool-pref: "uc.padding.bigger") {
-    #main-window {
-        --zen-element-separation: 16px !important;
-      }
-      
-      #zen-sidebar-top-buttons {
-        margin: 16px -8px 0px 8px!important;
-      }
-      
-      #zen-sidebar-icons-wrapper {
-        margin: 0px 8px !important;
-        width: auto !important;
-      }
-      
-      #navigator-toolbox {
-        gap: 8px !important;
-      }
-          
-      #tabbrowser-tabbox:has(#tabbrowser-tabpanels[zen-split-view="true"]) {
-        --zen-split-row-gap: calc(var(--zen-element-separation) + 1px) !important;
-        --zen-split-column-gap: calc(var(--zen-element-separation) + 22px) !important;
-        margin-right: -16px !important;
-      }  
+  #main-window {
+    --zen-element-separation: 16px !important;
+  }
+
+  #zen-sidebar-top-buttons {
+    margin: 16px -8px 0px 8px !important;
+  }
+
+  #zen-sidebar-icons-wrapper {
+    margin: 0px 8px !important;
+    width: auto !important;
+  }
+
+  #navigator-toolbox {
+    gap: 8px !important;
+  }
+
+  #tabbrowser-tabbox:has(#tabbrowser-tabpanels[zen-split-view="true"]) {
+    --zen-split-row-gap: calc(var(--zen-element-separation) + 1px) !important;
+    --zen-split-column-gap: calc(var(--zen-element-separation) + 22px) !important;
+    margin-right: -16px !important;
+  }
 }
 
 /* biggest mode */
 @media (-moz-bool-pref: "uc.padding.biggest") {
-    #main-window {
-        --zen-element-separation: 20px !important;
-      }
-      
-      #zen-sidebar-top-buttons {
-        margin: 20px -10px 0px 10px!important;
-      }
-      
-      #zen-sidebar-icons-wrapper {
-        margin: 0px 10px !important;
-        width: auto !important;
-      }
-      
-      #navigator-toolbox {
-        gap: 10px !important;
-      }
-          
-      #tabbrowser-tabbox:has(#tabbrowser-tabpanels[zen-split-view="true"]) {
-        --zen-split-row-gap: calc(var(--zen-element-separation) + 1px) !important;
-        --zen-split-column-gap: calc(var(--zen-element-separation) + 26px) !important;
-        margin-right: -20px !important;
-      }   
+  #main-window {
+    --zen-element-separation: 20px !important;
+  }
+
+  #zen-sidebar-top-buttons {
+    margin: 20px -10px 0px 10px !important;
+  }
+
+  #zen-sidebar-icons-wrapper {
+    margin: 0px 10px !important;
+    width: auto !important;
+  }
+
+  #navigator-toolbox {
+    gap: 10px !important;
+  }
+
+  #tabbrowser-tabbox:has(#tabbrowser-tabpanels[zen-split-view="true"]) {
+    --zen-split-row-gap: calc(var(--zen-element-separation) + 1px) !important;
+    --zen-split-column-gap: calc(var(--zen-element-separation) + 26px) !important;
+    margin-right: -20px !important;
+  }
+}
+
+/* compact sidebar fix */
+
+@media (-moz-bool-pref: "zen.view.compact") {
+  #navigator-toolbox[zen-has-hover="true"] {
+    #zen-sidebar-top-buttons {
+      margin: 0px !important;
+    }
+
+    #zen-sidebar-icons-wrapper {
+      margin: 0px !important;
+    }
+  }
 }
